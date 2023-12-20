@@ -3,7 +3,6 @@
 
 void dictionary_add(Dictionary *dictionary, const char *filename) {
 	
-    // Open the file
     FILE *file = fopen(filename, "r");
     if (file == NULL) {
         perror("Error opening file");
@@ -11,15 +10,13 @@ void dictionary_add(Dictionary *dictionary, const char *filename) {
     }
 
     // Read the file line by line
-    char line[256]; // Adjust the size based on your needs
+    char line[256];
     while (fgets(line, sizeof(line), file) != NULL) {
 		
 		const key = sumofASCII(line);
 		// talvez implementar uma hashtable
 		
     }
-
-    // Close the file
     fclose(file);
 }
 
