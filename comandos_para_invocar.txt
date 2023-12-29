@@ -1,0 +1,7 @@
+compilar
+gcc -o spell_check spell_check.c -Wall `pkg-config --cflags --libs glib-2.0`
+
+
+  run
+
+  ./spell_check -d dicionario.txt -t text_to_check.txt
