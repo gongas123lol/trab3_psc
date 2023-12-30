@@ -1,5 +1,5 @@
 compilar
-gcc -o spell_check spell_check.c -Wall `pkg-config --cflags --libs glib-2.0`
+gcc -o spell_check spell_check.c -Wall `pkg-config --cflags --libs glib-2.0` -L. -lmydictionary
 
 
   run
